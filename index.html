@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS357 Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id = "tutorial" hidden="true">
+        <div id="tutorial_page">
+            <div id="button_bar">
+                <button id="close_tutorial">X</button>
+            </div>
+            <div id="tutorial_content">
+                <h1>Introduction</h1>
+                <p>Welcome to the site! This tool presumes you have some basic understanding of what a Turing machine is and how it works. </p>
+                <h2>Navigation</h2>
+                <p>You can navigate through either window by <b>left-click and dragging</b> a blank space to pan, and by using the <b>scroll wheel</b> to zoom in and out.</p>
+                <p>To adjust the size of the windows, <b> left-click and drag</b> the line separating them.</p>
+
+                <h2>Top window</h2>
+                <p>The top window is where you can write inputs on the tape, run the Turing machine on the tape, and view its operation.</p>
+                <h3>The tape</h3>
+                <p>To write an input on the tape, click on the tape and enter the desired input into the text prompt. This will reset the state of the Turing machine.</p>
+                <p>The large box beneath the tape indicates the current state of the Turing machine. It will turn red upon halting while not in an accepting state, and
+                    turn green upon reaching an accepting state.
+                </p>
+                <p>The two black triangles indicate the head of the Turing machine.</p>
+                <h3>Running the machine</h3>
+                <p>The three buttons in the bottom left allow you to operate the Turing machine.</p>
+                <img src="res/tut0.png"></img>
+                <h2>Bottom window</h2>
+                <p>The bottom window is where you program the Turing machine by constructing a finite state machine.</p>
+                <h3>Manipulating states</h3>
+                <p>To create a new state, <b>shift + left-click</b> on a blank spot. The first state you place will automatically become the
+                    initial state of the Turing machine. This is indicated by a one-directional arrow pointing into the state.
+                </p>
+                <p>To set a state to the initial state, <b>ctrl + left click on it.</b></p>
+                <p>To delete a state, <b>press X</b> while hovering over it.</p>
+                <p>To set a state to as an accepting state, <b>alt + left click on it.</b></p>
+                <p>To move a state, <b>left-click and drag</b> it.</p>
+                <h3>Transitions</h3>
+                <p>To add a transition, <b>shift + left-click and drag</b> from the starting node to the ending node. You will then be prompted
+                    for three text inputs, indicated by a blinking cursor above the newly created arrow. </p><p> The first symbol you type in is the symbol
+                    that must be read on the tape for the transition to take place. </p><p>The second symbol you type is what the Turing machine will write
+                    on the tape upon taking the transition.</p> <p>The final symbol, which must be either 'l' or 'r', determines the direction the Turing machine
+                    will go after writing on the tape (left or right, respectively).</p>
+                    <p>Use the underscore key to indicate a space. Click anywhere on the window to cancel creating the transition.</p>
+                    <img src="res/tut1.png"></img>
+                    <p><b>Left-click and drag</b> on an existing transition to bend it.</p>
+                    <p>Because this is a non-deterministic Turing machine, you will not be able to make multiple transitions going out of a state which all require the same symbol to be read from the tape.</p>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/tutorial.js"></script>
+    <section top>
+        <canvas id = "canvas"></canvas>
+        <script src="scripts/tm.js"></script>
+    </section>
+    <section bottom>
+        <canvas id = "fsm_canvas"></canvas>
+        <script src="scripts/fsm.js"></script>
+    </section>
+    
+</body>
+</html>

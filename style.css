@@ -1,0 +1,121 @@
+#canvas {
+    width: 100%;
+    height: 100%;
+    position:relative;
+    object-fit:contain;
+}
+#fsm_canvas {
+    width: 100%;
+    position:relative;
+    object-fit: contain;
+}
+
+#tutorial {
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#close_tutorial {
+    border: solid;
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    font-size: 225%;
+    background-color: white;
+    font-family: "Consolas", "monospace";
+    float: right;
+    margin: 10px;
+}
+
+#close_tutorial:hover {
+    border: solid;
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    font-size: 220%;
+    border-width: 6px;
+    font-family: "Consolas", "monospace";
+    float: right;
+    margin: 10px;
+}
+
+#tutorial_content {
+    border: none;
+    border-color: green;
+    margin: 0;
+    padding: 20px;
+    text-align: justify;
+    max-height: calc(100% - 120px);
+    overflow-y: scroll;
+}
+
+#button_bar {
+    border: none;
+    border-color: red;
+    width: 100%;
+    height: 75px;
+    align-content: center;
+}
+
+#tutorial_page {
+    position: relative;
+    width: 36vw;
+    height: 90vh;
+    border-color: black;
+    border: solid;
+    border-radius: 10px;
+    border-width: 5px;
+    background-color: white;
+    box-shadow: 10px 10px 20px black;
+    left: 32vw;
+    top: 5vh;
+}
+
+section.bottom {
+    width: 100%;
+    height: 50%;
+    position:fixed;
+}
+section.top {
+    width: 100%;
+    height: 50%;
+    position:absolute;
+}
+
+img {
+    max-width: 90%;
+}
+
+p {
+    font-family: "Consolas", "monospace";
+    font-size: large;
+}
+
+h1 {
+    text-align: left;
+    font-family: "Consolas", "monospace";
+}
+h2 {
+    text-align: left;
+    font-family: "Consolas", "monospace";
+}
+h3 {
+    text-align: left;
+    font-family: "Consolas", "monospace";
+}
+
+nav ul{height:200px; width:18%;}
+nav ul{overflow:hidden; overflow-y:hidden;}
+
+body {
+    margin: 0;
+    overflow:hidden;
+}
+
+section.test {
+    border: 1px solid black;
+    font: 30px sans-serif;
+}
