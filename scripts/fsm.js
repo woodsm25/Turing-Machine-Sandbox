@@ -920,9 +920,7 @@ function onKeyPress(event) {
             return;
         }
 
-        console.log("Here");
         tm.addRule(text_entry_rule);
-        console.log(tm.rules);
         tm.reset();
 
         window.clearInterval(animation_timer);

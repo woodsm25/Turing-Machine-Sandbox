@@ -152,7 +152,6 @@ class TuringMachine {
         tape.idx+=-direction;
         let action = this.getAction(tape.get(tape.idx));
 
-        console.log(action);
         if (action[1] == Directions.H || tm.state == tm.accepting) {
             done = true;
             return;
@@ -384,7 +383,12 @@ function onClick(event) {
 
     // Tape?
     if (tape_bold) {
-        og_tape = ('_' + prompt("Enter new tape value")).split("");
+        user_input = prompt("Enter new tape value")
+        if (user_input == null) {
+            user_input = ""
+        }
+        og_tape = ('_' + user_input).split("");
+
         tape.setContent(og_tape);
         tm.reset();
 
